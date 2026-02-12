@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+body {
+    background: #E9D9C0;
+}
+
+header {
+    position: relative;
+}
+
+.header_slider img {
+    width: 100%;
+}
+
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5% 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 img {
+    width: 434px;
+    vertical-align: baseline;
+}
+
+h2 {
+    font-family: "Diplomata SC", serif;
+    color: #D20202;
+    font-size: 40px;
+    margin-bottom: 32px;
+}
+
+.pc_nav ul {
+    display: flex;
+    gap: 48px;
+}
+
+.pc_nav ul li {
+    color: #fff;
+    font-family: "Alatsi", sans-serif;
+}
+
+.main_text {
+    text-align: center;
+    padding: 40px;
+    margin: 72px;
+}
+
+.catchcopy {
+    font-size: 64px;
+    line-height: 1.5;
+    padding: 40px 105.5px 16px;
+}
+
+section {
+    margin: 0 auto;
+}
+
+.about {
+    max-width: 1000px;
+    display: flex;
+    padding: 40px;
+}
+
+.about_text {
+    max-width: 520px;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.copy {
+    font-size: 32px;
+    line-height: 1.5;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.menu {
+    max-width: 1000px;
+}
+
+.menu h2 {
+    text-align: center;
+    margin-top: 144px;
+    margin-bottom: 32px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    width: 30%;
+}
+
+.menu li img {
+    border-top-right-radius: 45px;
+}
+
+.menu h3 {
+    font-family: "Diplomata SC", serif;
+    color: #D20202;
+    font-size: 32px;
+    margin-bottom: 6px;
+}
+
+.gallery {
+    max-width: 1000px;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-top: 144px;
+}
+
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
