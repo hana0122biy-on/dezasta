@@ -49,31 +49,46 @@ h2 {
 
 .main_text {
     text-align: center;
-    padding: 40px;
-    margin: 72px;
+    margin: 132px 0 144px;
 }
 
-.catchcopy {
+.catchcopy1 {
+    font-family: "Alatsi", sans-serif;
+    font-size: 26px;
+}
+
+.catchcopy2 {
     font-size: 64px;
     line-height: 1.5;
-    padding: 40px 105.5px 16px;
+    padding: 40px 0 16px;
+}
+
+.message {
+    font-size: 24px;
+    line-height: 1.5;
 }
 
 section {
     margin: 0 auto;
+    margin-bottom: 144px;
+
 }
 
 .about {
     max-width: 1000px;
     display: flex;
-    padding: 40px;
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+.about div img {
+    width: 44%;
+    border-bottom-right-radius: 45px;
 }
 
 .about_text {
-    max-width: 520px;
+    width: 52%;
     text-align: left;
-    margin-left: 40px;
-    margin-bottom: 40px;
 }
 
 .copy {
@@ -89,7 +104,6 @@ section {
 
 .menu h2 {
     text-align: center;
-    margin-top: 144px;
     margin-bottom: 32px;
 }
 
@@ -97,10 +111,15 @@ section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .menu li {
     width: 30%;
+}
+
+.menu li div {
+    position: relative;
 }
 
 .menu li img {
@@ -109,21 +128,85 @@ section {
 
 .menu h3 {
     font-family: "Diplomata SC", serif;
+    font-size: 26px;
     color: #D20202;
-    font-size: 32px;
-    margin-bottom: 6px;
+    position: absolute;
+    top: 95%;
 }
 
-.gallery {
-    max-width: 1000px;
+.menu p {
+    margin-top: 23px;
 }
 
 .gallery h2 {
     text-align: center;
-    margin-top: 144px;
+    margin-bottom: 32px;
 }
 
 .gallery ul {
     display: flex;
     justify-content: space-between;
+}
+
+.event h2 {
+    text-align: center;
+}
+
+.event_box {
+    width: 1000px;
+    padding: 32px;
+    background: #ffffff;
+    border: solid 1px #4F270B
+}
+
+.event_info {
+    max-width: 1000px;
+    display: flex;
+}
+
+.event_date {
+    margin-right: 40px;
+}
+
+.access h2 {
+    text-align: center;
+}
+
+iframe {
+    width: 1440px;
+    height: 353px;
+}
+
+footer {
+    width: 1440px;
+    height: 384px;
+    background-color: #ffffff;
+    margin-top: -144px;
+}
+
+.footer_group {
+    width: 1000px;
+    display: flex;
+}
+
+.footer_title {
+    font-family: "Diplomata SC", serif;
+    color: #4F270B;
+    font-size: 28px;
+}
+
+footer div {
+    max-width: 1000px;
+    margin: 80px 0 60px;
+    display: flex;
+}
+
+.footer_info {
+    width: 580px;
+    display: flex;
+}
+
+.copyright {
+    bottom: 0;
+    left: 0;
 }
