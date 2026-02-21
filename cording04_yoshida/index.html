@@ -14,13 +14,17 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <div class="header_slider">
             <div>
-                <img src="./images/pc_first-100.jpg" alt="店内の様子">
+                <picture>
+                    <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
             </div>
         </div>
         <div class="header_wrap">
@@ -29,11 +33,23 @@
             </h1>
             <nav class="pc_nav">
                 <ul>
-                    <li>ABOUT US</li>
-                    <li>MENU</li>
-                    <li>GALLERY</li>
-                    <li>EVENT</li>
-                    <li>ACCESS</li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">MENU</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">EVENT</a></li>
+                    <li><a href="">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">MENU</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">EVENT</a></li>
+                    <li><a href="">ACCESS</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,10 +63,12 @@
                 足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
         </div>
 
+
         <section class="about">
-            <div>
+            <picture>
+                <source srcset="./images/about_us@2x-100.jpg" media="(max-width:767px)">
                 <img src="./images/pc_about-100.jpg" alt="ABOUT US">
-            </div>
+            </picture>
             <div class="about_text">
                 <h2>ABOUT US</h2>
                 <p class="copy">私たちが提供する<br>こだわりのコーヒー</p>
@@ -64,7 +82,8 @@
             <ul>
                 <li>
                     <div>
-                        <img src="./images/pc_menu_drink-100.jpg" alt="DRINK">
+                        <img src="./images/pc_menu_drink-100.jpg" class="pc_drink" alt="DRINK">
+                        <img src="./images/drink_sp@2x-100.jpg" class="sp_drink" alt="SP_DRINK">
                         <h3>DRINK</h3>
                     </div>
                     <p>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
@@ -143,29 +162,39 @@
 
     <footer>
         <div class="footer_group">
-            <div class="footer_title">
-                DESIGN CAFE
-            </div>
-            <div class="footer_info">
-                <div class="shop_info">
-                    <p class="time">営業時間</p>
-                    <p>OPEN 18:00 / CLOSE 24:00</p>
+            <div>
+                <div class="footer_title">
+                    DESIGN CAFE
                 </div>
-                <div class="shop_info">
-                    <p class="address">住所</p>
-                    <p>〒150-0022<br>
-                        東京都渋谷区東京南123デザインビルB1</p>
-                </div>
-                <div class="shop_info">
-                    <p class="mail">メール</p>
-                    <p>info@designcafe.tokyo</p>
+                <div class="footer_info">
+                    <div class="shop_info">
+                        <p class="content">営業時間</p>
+                        <p class="detail">OPEN 18:00 / CLOSE 24:00</p>
+                    </div>
+                    <div class="shop_info">
+                        <p class="content">住所</p>
+                        <p class="detail">〒150-0022<br>
+                            東京都渋谷区東京南123デザインビルB1</p>
+                    </div>
+                    <div class="shop_info">
+                        <p class="content">メール</p>
+                        <p class="detail">info@designcafe.tokyo</p>
+                    </div>
                 </div>
             </div>
             <p class="copyright">©2021 DESIGN CAFE</p>
         </div>
-
     </footer>
-</body>
 
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
+    </script>
+</body>
 
 </html>
