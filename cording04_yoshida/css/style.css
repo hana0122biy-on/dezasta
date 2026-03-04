@@ -25,12 +25,17 @@ header {
     box-sizing: border-box;
 }
 
-
-
 h1 img {
     width: 434px;
     vertical-align: baseline;
 }
+
+@media screen and (max-width:767px) {
+    h1 img {
+        width: 244px;
+    }
+}
+
 
 h2 {
     font-family: "Diplomata SC", serif;
@@ -173,6 +178,10 @@ h2 {
         font-size: 20px;
         width: 100%;
     }
+
+    .spbr {
+        display: none;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -189,8 +198,12 @@ h2 {
         font-size: 16px;
     }
 
+    .spbr {
+        display: block;
+    }
+
     .main_text {
-        margin-bottom: 80px;
+        margin: 126px 0 80px;
     }
 }
 
@@ -246,7 +259,6 @@ section {
         align-items: center;
         justify-content: center;
         padding: 0 20px;
-        width: 100%;
     }
 
     .about picture {
@@ -265,6 +277,7 @@ section {
     .about_text h2 {
         font-size: 32px;
         margin: 40px 0 32px;
+        text-align: center;
     }
 
     .copy {
@@ -314,6 +327,10 @@ section {
 }
 
 @media screen and (max-width:767px) {
+    .menu h2 {
+        font-size: 32px;
+    }
+
     .menu ul {
         flex-direction: column;
         align-items: center;
@@ -350,9 +367,19 @@ section {
     margin-bottom: 32px;
 }
 
-.gallery ul {
+.gallery_slider {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:767px) {
+    .gallery h2 {
+        font-size: 32px;
+    }
+
+    .gallery_slider {
+        margin: 0;
+    }
 }
 
 .event {
@@ -388,9 +415,17 @@ section {
 }
 
 @media screen and (max-width:767px) {
+    .event h2 {
+        font-size: 32px;
+    }
+
     .event_info {
         flex-direction: column;
         margin-bottom: 32px;
+    }
+
+    .event_info:last-child {
+        margin-bottom: 0;
     }
 
     .event_box>div {
@@ -417,6 +452,16 @@ iframe {
     width: 100%;
     height: 353px;
     display: block;
+}
+
+@media screen and (max-width:767px) {
+    .access h2 {
+        font-size: 32px;
+    }
+
+    iframe {
+        height: 240px;
+    }
 }
 
 footer {
@@ -462,7 +507,14 @@ footer>div {
     left: 0;
 }
 
-.button_top {
+.button_container {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 140px;
+}
+
+/* .button_top {
     background-color: red;
     color: white;
     font-family: "Alatsi", sans-serif;
@@ -486,19 +538,16 @@ footer>div {
 }
 
 .button_top::before {
-    /* ④絶対必要 */
     content: "";
     display: block;
 
-    /* ⑤三角のサイズ */
     width: 10px;
     height: 10px;
 
-    /* ⑥三角の線と回転角度 */
     border-top: 2px solid white;
     border-right: 2px solid white;
     transform: rotate(-45deg);
-}
+} */
 
 @media screen and (max-width:767px) {
     .footer_group>div {
@@ -519,12 +568,20 @@ footer>div {
         padding: 0;
     }
 
-    .button_container {
-        text-align: right;
-        margin: 54px 20px;
-    }
-
     .copyright {
         padding: 0 20px;
     }
+}
+
+.slick-dots {
+    bottom: -50px;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    font-size: 10px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
 }
