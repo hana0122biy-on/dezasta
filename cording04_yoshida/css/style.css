@@ -178,10 +178,10 @@ h2 {
         font-size: 20px;
         width: 100%;
     }
+}
 
-    .spbr {
-        display: none;
-    }
+.spbr {
+    display: none;
 }
 
 @media screen and (max-width:767px) {
@@ -353,7 +353,7 @@ section {
     }
 
     .menu li img {
-        border-top-right-radius: 45px;
+        width: 100%;
     }
 
     .menu {
@@ -377,8 +377,8 @@ section {
         font-size: 32px;
     }
 
-    .gallery_slider {
-        margin: 0;
+    .gallery_slider img {
+        width: 100%;
     }
 }
 
